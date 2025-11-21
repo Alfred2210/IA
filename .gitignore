@@ -1,0 +1,65 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+Builds/
+ExportedObj/
+MemoryCaptures/
+Logs/
+UserSettings/
+# Unity generated project files (optionnel selon workflow)
+*.csproj
+*.unityproj
+*.sln
+
+# Visual Studio
+*.sln.docstates
+*.suo
+*.user
+.vs/
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.ncb
+*.sdf
+
+# C# / generated / IDE
+*.pidb
+*.booproj
+*.svd
+
+# C++ / build artifacts
+*.exe
+*.dll
+*.lib
+*.obj
+*.o
+*.pdb
+*.ilk
+*.tlog
+*.idb
+*.exp
+x64/
+Win32/
+ipch/
+
+# NuGet / packages
+packages/
+*.nupkg
+project.lock.json
+
+# JetBrains Rider
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Mobile / builds
+*.apk
+*.aab
+
+# Local editor prefs
+*.userprefs
+*.userosscache

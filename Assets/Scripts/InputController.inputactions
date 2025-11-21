@@ -1,0 +1,275 @@
+{
+    "version": 1,
+    "name": "InputController",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "488819ea-fa20-45bc-b799-a23be0f09b20",
+            "actions": [
+                {
+                    "name": "TestLinearSimple",
+                    "type": "Button",
+                    "id": "37599b4e-496f-40b9-b93b-b74394862a20",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearMultiple",
+                    "type": "Button",
+                    "id": "d93365c1-54bc-4bdd-a2e2-71dec9845c8f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestXOR",
+                    "type": "Button",
+                    "id": "5278dc74-a6cb-44ac-bb07-8a5b5faece62",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestCross",
+                    "type": "Button",
+                    "id": "104c4db8-a682-4109-bb2c-970844a91ecc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearSimple2d",
+                    "type": "Button",
+                    "id": "fbcd0c03-e9dc-46f7-a6ef-4ead2ef3ecb3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestNonLinearSimple2d",
+                    "type": "Button",
+                    "id": "06e0a723-bf39-46db-b1dd-42185ff8df9e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearSimple3d",
+                    "type": "Button",
+                    "id": "2f227e5b-57b2-4270-b095-274d3994f0d1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearTrick3d",
+                    "type": "Button",
+                    "id": "d786f184-8d7b-4b30-a94f-6165dc3fe417",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestNonLinearSimple3d",
+                    "type": "Button",
+                    "id": "8fddadf5-ec49-4e00-8d8d-9164523a632b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestNonLinearSimple2dC",
+                    "type": "Button",
+                    "id": "1c8eb7ee-e77c-40fe-8c38-f03b6dfdc76a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestNonLinearSimple2dR",
+                    "type": "Button",
+                    "id": "b7d2653b-8116-49ad-9696-8c4429c3435c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestXORC",
+                    "type": "Button",
+                    "id": "f1f07e82-1739-4ca2-b987-84db244b4359",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestXORR",
+                    "type": "Button",
+                    "id": "f1bf21d4-586b-4328-81f5-c71c7129c536",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ef28753a-8a47-4f78-a2e8-bc3cb8ccab3c",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearSimple",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec6d4d71-0595-4a4b-9abc-2ad1f094e758",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearMultiple",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18dc6884-915d-4548-a2a7-c60cfd772066",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestXOR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4ebd87c-c4bc-42ff-8f0b-a49cabb70667",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestCross",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f0f969e-d197-4b9d-83f8-e67b3c8a4506",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearSimple2d",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "21d7cd7c-ed2b-49f0-8a33-29df495dba83",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestNonLinearSimple2d",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5bcb43d2-8646-45c9-9526-32ce2a0a0640",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearSimple3d",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b41369a6-7db6-4f81-b26d-998a45ea4149",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearTrick3d",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7ad4070-1ea1-403d-8e37-d0ca8034d57d",
+                    "path": "<Keyboard>/u",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestNonLinearSimple3d",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec5670f3-c076-4dbf-8b4c-d7e043164c6f",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestNonLinearSimple2dC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5f672b8c-4673-4981-b4ae-7d5dae5c4bd3",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestNonLinearSimple2dR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2d5e32ae-ff8c-4fdc-bbac-1599605b7757",
+                    "path": "<Keyboard>/v",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestXORC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4d2d427d-5e10-43b4-9f80-22ea37afd311",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestXORR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
