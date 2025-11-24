@@ -131,7 +131,7 @@ public class PMC
         Debug.Log("PMC = Touche : X : LinearSimple (Classification) | C : LinearMultiple (Classification) | V : XOR (Classification) | B : Cross (Classification) | N : MultiLinear3Classes (Classification) | F : MultiCross (Classification) | G : LinearSimple2d (Regression) | H : NonLinearSimple2d (Regression) | J : LinearSimple3d (Regression) | K : LinearTrick3d (Regression) | L : NonLinearSimple3d (Regression) ");
 
         visualizer.DestroyPoints();
-        int N = 1000;
+        int N = 100;
         double[,] X = new double[N, 2];
         double[,] Y = new double[N, 3];
 
@@ -143,25 +143,27 @@ public class PMC
 
             X[i, 0] = x;
             X[i, 1] = y;
-            Color c = Color.black;
 
-            if (Mathf.Abs(x) < 0.3f || Mathf.Abs(y) < 0.3f)
+            Color c = Color.white;
+
+            if( x + y < 1)
             {
-                Y[i, 0] = 1; Y[i, 1] = -1; Y[i, 2] = -1; // [1, -1, -1]
+                Y[i, 0] = 1; Y[i, 1] = -1; Y[i, 2] = -1; // Classe 1
                 c = Color.blue;
             }
-            else if (x * y < 0)
+            else if (x > y)
             {
-                Y[i, 0] = -1; Y[i, 1] = 1; Y[i, 2] = -1; // [-1, 1, -1]
+                Y[i, 0] = -1; Y[i, 1] = 1; Y[i, 2] = -1; // Classe 2
                 c = Color.red;
             }
             else
             {
-                Y[i, 0] = -1; Y[i, 1] = -1; Y[i, 2] = 1; // [-1, -1, 1]
-                c = Color.green;
+                Y[i, 0] = -1; Y[i, 1] = -1; Y[i, 2] = 1; // Classe 3
+                c = Color.yellow;
             }
 
-            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], c);
+
+            visualizer.CreatePoint(x,y,c);
         }
 
         main.CreatePMC(new int[] { 2,3}); // neurones 
@@ -216,7 +218,7 @@ public class PMC
         main.TrainPMCModel(X, Y, 50000, 0.01, true);
         double[] input = { 0.5, 0.5 };
         double[] prediction = main.PredictPMCModel(input, true,3);
-        visualizer.DrawLimitsPMCClassification(-1f, 1f, -1f, 1f, 3);
+        visualizer.DrawLimitsPMCClassification(-1f, 1f, -1f, 1f,3);
         main.DeletePMCModel();
     }
 

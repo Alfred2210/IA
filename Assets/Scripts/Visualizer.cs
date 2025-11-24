@@ -52,12 +52,12 @@ public class Visualizer : MonoBehaviour
                 double[,] test = { { x, y } };
                 double[] pred = main.PredictClassificationModel(test);
 
-                // afficher les prédictions avec un dégradé de couleur
+                // afficher les pr dictions avec un d grad  de couleur
                 GameObject quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
                 quad.transform.position = new Vector3(x, y, 0.1f);
                 quad.transform.localScale = Vector3.one * pointSize * 1.0f;
 
-                // couleur selon la classe prédite
+                // couleur selon la classe pr dite
                 Color color = pred[0] > 0 ? new Color(0.5f, 0.5f, 1f, 0.3f) : new Color(1f, 0.5f, 0.5f, 0.3f);
                 quad.GetComponent<Renderer>().material.color = color;
                 points.Add(quad);
@@ -83,21 +83,17 @@ public class Visualizer : MonoBehaviour
 
                 float z = (float)pred[0];
                 float t = Mathf.InverseLerp(-3f, 3f, z);
-                // couleur selon la classe prédite
+                // couleur selon la classe pr dite
                 Color color = Color.Lerp(new Color(0.5f, 0.5f, 1f, 0.3f), new Color(1f, 0.5f, 0.5f, 0.3f), t);
                 color.a = 0.6f;
 
-                // afficher les prédictions avec un dégradé de couleur
+                // afficher les pr dictions avec un d grad  de couleur
                 GameObject quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
                 quad.transform.position = new Vector3(x, y, 0.1f);
 
                 float stepX = (xMax - xMin) / resolution;
                 float stepY = (yMax - yMin) / resolution;
                 quad.transform.localScale = new Vector3(stepX * 1.05f, stepY * 1.05f, 1f);
-
-
-
-
                 quad.GetComponent<Renderer>().material.color = color;
                 points.Add(quad);
             }
@@ -133,20 +129,20 @@ public class Visualizer : MonoBehaviour
                 // multi-classes (ex: 3 classes)
                 else
                 {
-                    // On cherche l'index le plus fort
-                    int classId = 0;
+                  
+                    int index = 0;
                     double maxVal = pred[0];
                     for (int k = 1; k < outputSize; k++)
                     {
-                        if (pred[k] > maxVal)
+                        if (pred[k] > maxVal) // nouvelle valeur max
                         {
-                            classId = k;
-                            maxVal = pred[k];
+                            index = k; // nouvelle classe
+                            maxVal = pred[k]; // mise  jour de la valeur max
                         }
                     }
-                    if (classId == 0) color = new Color(0.5f, 0.5f, 1f, 0.3f);      // Bleu
-                    else if (classId == 1) color = new Color(1f, 0.5f, 0.5f, 0.3f); // Rouge
-                    else if (classId == 2) color = new Color(0.5f, 1f, 0.5f, 0.3f); // Vert
+                    if (index == 0) color = new Color(0.5f, 0.5f, 1f, 0.3f);      
+                    else if (index == 1) color = new Color(1f, 0.5f, 0.5f, 0.3f); 
+                    else if (index == 2) color = new Color(0.5f, 1f, 0.5f, 0.3f); 
                 }
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.transform.position = new Vector3(x, y, 0.1f);
