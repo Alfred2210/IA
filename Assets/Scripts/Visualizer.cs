@@ -127,8 +127,8 @@ public class Visualizer : MonoBehaviour
                 // binaire classification
                 if (outputSize == 1)
                 {
-                    if (pred[0] > 0) color = Color.blue;
-                    else color = Color.red;
+                    if (pred[0] > 0) color = new Color(0.5f, 0.5f, 1f, 0.3f);
+                    else color = new Color(1f, 0.5f, 0.5f, 0.3f);
                 }
                 // multi-classes (ex: 3 classes)
                 else
