@@ -88,7 +88,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TestNonLinearSimple2dC",
+                    "name": "TestLinearSimplePMC",
                     "type": "Button",
                     "id": "1c8eb7ee-e77c-40fe-8c38-f03b6dfdc76a",
                     "expectedControlType": "",
@@ -97,27 +97,90 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TestNonLinearSimple2dR",
+                    "name": "TestLinearMultiplePMC",
                     "type": "Button",
-                    "id": "b7d2653b-8116-49ad-9696-8c4429c3435c",
+                    "id": "6917e372-2f7f-49db-b084-70f9305e8d2a",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TestXORC",
+                    "name": "TestXORPMC",
                     "type": "Button",
-                    "id": "f1f07e82-1739-4ca2-b987-84db244b4359",
+                    "id": "ff22c8b5-95a8-4549-84f3-5b6207b4bedc",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TestXORR",
+                    "name": "TestCrossPMC",
                     "type": "Button",
-                    "id": "f1bf21d4-586b-4328-81f5-c71c7129c536",
+                    "id": "c9256df6-4c62-4145-bb1b-1066c85a49a7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestMultiLinear3Classes",
+                    "type": "Button",
+                    "id": "29ea8072-a0a6-4f81-b4e6-801856a1d16b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestMultiCross",
+                    "type": "Button",
+                    "id": "937f82ea-f65e-4414-b851-1d064bb50559",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearSimple2DPMC",
+                    "type": "Button",
+                    "id": "8e79cab8-4655-401d-8030-9ced1d47b578",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestNonLinearSimple2DPMC",
+                    "type": "Button",
+                    "id": "e4037101-aab2-457e-a383-68d8b582d079",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearSimple3DPMC",
+                    "type": "Button",
+                    "id": "3051a3ee-60ad-42a6-9e7d-71a5b1407bc4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestLinearTrick3DPMC",
+                    "type": "Button",
+                    "id": "a325fbcc-8ba1-422a-894a-9f007059ad9e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TestNonLinearSimple3DPMC",
+                    "type": "Button",
+                    "id": "74ad5d90-8aa7-43a1-acc7-8dc6d111c38b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -227,44 +290,121 @@
                 {
                     "name": "",
                     "id": "ec5670f3-c076-4dbf-8b4c-d7e043164c6f",
-                    "path": "<Keyboard>/c",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TestNonLinearSimple2dC",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5f672b8c-4673-4981-b4ae-7d5dae5c4bd3",
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TestNonLinearSimple2dR",
+                    "action": "TestLinearSimplePMC",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "2d5e32ae-ff8c-4fdc-bbac-1599605b7757",
+                    "id": "555abb02-3dd0-4229-9df4-83c982db8313",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearMultiplePMC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2b41a99-d8e9-498d-9b17-f9f162348065",
                     "path": "<Keyboard>/v",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TestXORC",
+                    "action": "TestXORPMC",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "4d2d427d-5e10-43b4-9f80-22ea37afd311",
+                    "id": "6d14e0b1-879e-418c-be84-27db8995a277",
                     "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TestXORR",
+                    "action": "TestCrossPMC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1bc38c99-c21a-4c05-bf87-750f2e4a5f97",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestMultiLinear3Classes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eff78d33-15bf-4810-b168-65bcf639fae2",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestMultiCross",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1b8e3ddc-c49d-4754-bf82-71b1b607a70b",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearSimple2DPMC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc2b945e-844e-45aa-80e1-9ca284072bc3",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestNonLinearSimple2DPMC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ebe0b50-59cd-474f-a356-a26d80a619c5",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearSimple3DPMC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4587ad0-69ca-4dba-a1e3-a391aed0c222",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestLinearTrick3DPMC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83126e50-ca1d-42cf-8fc1-2c4addccafd3",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestNonLinearSimple3DPMC",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -25,12 +25,21 @@ public class InputManager : MonoBehaviour
         inputActions.Player.TestLinearTrick3d.performed += onTestLinearTrick3d;
         inputActions.Player.TestNonLinearSimple3d.performed += OnTestNonLinearSimple3d;
 
-        //PMC tests
-        inputActions.Player.TestNonLinearSimple2dC.performed += OnTestNonLinearSimple2dC;
-        inputActions.Player.TestNonLinearSimple2dR.performed += OnTestNonLinearSimple2dR;
+        //PMC tests Classification
+        inputActions.Player.TestLinearSimplePMC.performed += OnTestLinearSimplePMC;
+        inputActions.Player.TestXORPMC.performed += OnTestXORPMC;
+        
+        inputActions.Player.TestLinearMultiplePMC.performed += OnTestLinearMultiplePMC;
+        inputActions.Player.TestCrossPMC.performed += OnTestCrossPMC;
+        inputActions.Player.TestMultiLinear3Classes.performed += OnTestMultiLinear3ClassesPMC;
+        inputActions.Player.TestMultiCross.performed += OnTestMultiCrossPMC;
+        //PMC tests Regression
+        inputActions.Player.TestLinearSimple2DPMC.performed += OnTestLinearSimple2dPMC;
+        inputActions.Player.TestNonLinearSimple2DPMC.performed += OnTestNonLinearSimple2dPMC;
+        inputActions.Player.TestLinearSimple3DPMC.performed += OnTestLinearSimple3dPMC;
+        inputActions.Player.TestLinearTrick3DPMC.performed += OnTestLinearTrick3dPMC;
+        inputActions.Player.TestNonLinearSimple3DPMC.performed += OnTestNonLinearSimple3dPMC;
 
-        inputActions.Player.TestXORC.performed += OnTestXORC;
-        inputActions.Player.TestXORR.performed += OnTestXORR;
     }
 
     void OnEnable()
@@ -123,35 +132,92 @@ public class InputManager : MonoBehaviour
         }
     }
     //PMC tests
-    public void OnTestNonLinearSimple2dC(InputAction.CallbackContext context)
+   
+    public void OnTestLinearSimplePMC(InputAction.CallbackContext context)
     {
         if (context.performed && app != null)
         {
-            app.LaunchTestNonLinearSimple2dC();
+            app.LaunchTestLinearSimplePMC();
         }
     }
 
-    public void OnTestNonLinearSimple2dR(InputAction.CallbackContext context)
+    public void OnTestXORPMC(InputAction.CallbackContext context)
     {
         if (context.performed && app != null)
         {
-            app.LaunchTestNonLinearSimple2dR();
+            app.LaunchTestXORPMC();
         }
     }
 
-    public void OnTestXORC(InputAction.CallbackContext context)
+    public void OnTestLinearMultiplePMC(InputAction.CallbackContext context)
     {
         if (context.performed && app != null)
         {
-            app.LaunchTestXORC();
+            app.LaunchTestLinearMultiplePMC();
         }
     }
 
-    public void OnTestXORR(InputAction.CallbackContext context)
+    public void OnTestCrossPMC(InputAction.CallbackContext context)
     {
         if (context.performed && app != null)
         {
-            app.LaunchTestXORR();
+            app.LaunchTestCrossPMC();
         }
     }
+
+    public void OnTestMultiLinear3ClassesPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestMultiLinear3ClassesPMC();
+        }
+    }
+
+    public void OnTestMultiCrossPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestMultiCrossPMC();
+        }
+    }
+    public void OnTestLinearSimple2dPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestLinearSimple2dPMC();
+        }
+    }
+    public void OnTestNonLinearSimple2dPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestNonLinearSimple2dPMC();
+        }
+    }
+
+    public void OnTestLinearSimple3dPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestLinearSimple3dPMC();
+        }
+    }
+
+    public void OnTestLinearTrick3dPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestLinearTrick3dPMC();
+        }
+    }
+    public void OnTestNonLinearSimple3dPMC(InputAction.CallbackContext context)
+    {
+        if (context.performed && app != null)
+        {
+            app.LaunchTestNonLinearSimple3dPMC();
+        }
+    }
+
+
+
 }

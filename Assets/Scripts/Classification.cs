@@ -26,13 +26,13 @@ public class Classification
 
         double[,] X = {
         // point 1 Bleu en bas à gauche
-        { Random.Range(0f, 2f), Random.Range(0f, 2f) }, 
+        { 1, 1 }, 
         
         // point 2 Rouge en haut à droite
-        { Random.Range(2.5f, 4f), Random.Range(2.5f, 4f) }, 
+        { 2, 3 }, 
         
         // point 3 Rouge en haut à droite
-        { Random.Range(2.5f, 4f), Random.Range(2.5f, 4f) }
+        { 3, 3 }
     };
         double[] Y = { 1, -1, -1 };
 
@@ -43,7 +43,7 @@ public class Classification
         main.TrainClassificationModel(X, Y);
         visualizer.DrawLimitsClassification(0f, 4, 0f, 4f);
 
-        Debug.Log("classification =  touche : haut : linear simple | gauche: linear Multiple | bas: XOR | droite: Cross ");
+        Debug.Log("Classification = Touche : Haut : Linear Simple | Gauche: Linear Multiple | Bas: XOR | Droite: Cross ");
     }
 
     public void TestLinearMultiple()

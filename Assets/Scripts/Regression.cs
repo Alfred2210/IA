@@ -34,7 +34,7 @@ public class Regression
         main.TrainRegressionModel(X, Y);
         visualizer.DrawLimitsRegression(0f, 4, 0f, 4f);
 
-        Debug.Log("regression =  touche : 5 : linear simple 2d | 1 : LinearSimple3d | 2 : LinearTrick3d | 3 : NonLinearSimple2d | 4 : NonLinearSimple3d ");
+        Debug.Log("Regression = Touche : E : Linear Simple 2D | R : LinearSimple3d | T : LinearTrick3d | Y : NonLinearSimple2d | U : NonLinearSimple3d ");
     }
 
     public void TestNonLinearSimple2d()

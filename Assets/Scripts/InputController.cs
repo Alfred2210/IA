@@ -174,7 +174,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TestNonLinearSimple2dC"",
+                    ""name"": ""TestLinearSimplePMC"",
                     ""type"": ""Button"",
                     ""id"": ""1c8eb7ee-e77c-40fe-8c38-f03b6dfdc76a"",
                     ""expectedControlType"": """",
@@ -183,27 +183,90 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TestNonLinearSimple2dR"",
+                    ""name"": ""TestLinearMultiplePMC"",
                     ""type"": ""Button"",
-                    ""id"": ""b7d2653b-8116-49ad-9696-8c4429c3435c"",
+                    ""id"": ""6917e372-2f7f-49db-b084-70f9305e8d2a"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TestXORC"",
+                    ""name"": ""TestXORPMC"",
                     ""type"": ""Button"",
-                    ""id"": ""f1f07e82-1739-4ca2-b987-84db244b4359"",
+                    ""id"": ""ff22c8b5-95a8-4549-84f3-5b6207b4bedc"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""TestXORR"",
+                    ""name"": ""TestCrossPMC"",
                     ""type"": ""Button"",
-                    ""id"": ""f1bf21d4-586b-4328-81f5-c71c7129c536"",
+                    ""id"": ""c9256df6-4c62-4145-bb1b-1066c85a49a7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestMultiLinear3Classes"",
+                    ""type"": ""Button"",
+                    ""id"": ""29ea8072-a0a6-4f81-b4e6-801856a1d16b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestMultiCross"",
+                    ""type"": ""Button"",
+                    ""id"": ""937f82ea-f65e-4414-b851-1d064bb50559"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestLinearSimple2DPMC"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e79cab8-4655-401d-8030-9ced1d47b578"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestNonLinearSimple2DPMC"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4037101-aab2-457e-a383-68d8b582d079"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestLinearSimple3DPMC"",
+                    ""type"": ""Button"",
+                    ""id"": ""3051a3ee-60ad-42a6-9e7d-71a5b1407bc4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestLinearTrick3DPMC"",
+                    ""type"": ""Button"",
+                    ""id"": ""a325fbcc-8ba1-422a-894a-9f007059ad9e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TestNonLinearSimple3DPMC"",
+                    ""type"": ""Button"",
+                    ""id"": ""74ad5d90-8aa7-43a1-acc7-8dc6d111c38b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -313,44 +376,121 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ec5670f3-c076-4dbf-8b4c-d7e043164c6f"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TestNonLinearSimple2dC"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5f672b8c-4673-4981-b4ae-7d5dae5c4bd3"",
                     ""path"": ""<Keyboard>/x"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TestNonLinearSimple2dR"",
+                    ""action"": ""TestLinearSimplePMC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2d5e32ae-ff8c-4fdc-bbac-1599605b7757"",
+                    ""id"": ""555abb02-3dd0-4229-9df4-83c982db8313"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestLinearMultiplePMC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2b41a99-d8e9-498d-9b17-f9f162348065"",
                     ""path"": ""<Keyboard>/v"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TestXORC"",
+                    ""action"": ""TestXORPMC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""4d2d427d-5e10-43b4-9f80-22ea37afd311"",
+                    ""id"": ""6d14e0b1-879e-418c-be84-27db8995a277"",
                     ""path"": ""<Keyboard>/b"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TestXORR"",
+                    ""action"": ""TestCrossPMC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1bc38c99-c21a-4c05-bf87-750f2e4a5f97"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestMultiLinear3Classes"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eff78d33-15bf-4810-b168-65bcf639fae2"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestMultiCross"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b8e3ddc-c49d-4754-bf82-71b1b607a70b"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestLinearSimple2DPMC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc2b945e-844e-45aa-80e1-9ca284072bc3"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestNonLinearSimple2DPMC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ebe0b50-59cd-474f-a356-a26d80a619c5"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestLinearSimple3DPMC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4587ad0-69ca-4dba-a1e3-a391aed0c222"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestLinearTrick3DPMC"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83126e50-ca1d-42cf-8fc1-2c4addccafd3"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestNonLinearSimple3DPMC"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -370,10 +510,17 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         m_Player_TestLinearSimple3d = m_Player.FindAction("TestLinearSimple3d", throwIfNotFound: true);
         m_Player_TestLinearTrick3d = m_Player.FindAction("TestLinearTrick3d", throwIfNotFound: true);
         m_Player_TestNonLinearSimple3d = m_Player.FindAction("TestNonLinearSimple3d", throwIfNotFound: true);
-        m_Player_TestNonLinearSimple2dC = m_Player.FindAction("TestNonLinearSimple2dC", throwIfNotFound: true);
-        m_Player_TestNonLinearSimple2dR = m_Player.FindAction("TestNonLinearSimple2dR", throwIfNotFound: true);
-        m_Player_TestXORC = m_Player.FindAction("TestXORC", throwIfNotFound: true);
-        m_Player_TestXORR = m_Player.FindAction("TestXORR", throwIfNotFound: true);
+        m_Player_TestLinearSimplePMC = m_Player.FindAction("TestLinearSimplePMC", throwIfNotFound: true);
+        m_Player_TestLinearMultiplePMC = m_Player.FindAction("TestLinearMultiplePMC", throwIfNotFound: true);
+        m_Player_TestXORPMC = m_Player.FindAction("TestXORPMC", throwIfNotFound: true);
+        m_Player_TestCrossPMC = m_Player.FindAction("TestCrossPMC", throwIfNotFound: true);
+        m_Player_TestMultiLinear3Classes = m_Player.FindAction("TestMultiLinear3Classes", throwIfNotFound: true);
+        m_Player_TestMultiCross = m_Player.FindAction("TestMultiCross", throwIfNotFound: true);
+        m_Player_TestLinearSimple2DPMC = m_Player.FindAction("TestLinearSimple2DPMC", throwIfNotFound: true);
+        m_Player_TestNonLinearSimple2DPMC = m_Player.FindAction("TestNonLinearSimple2DPMC", throwIfNotFound: true);
+        m_Player_TestLinearSimple3DPMC = m_Player.FindAction("TestLinearSimple3DPMC", throwIfNotFound: true);
+        m_Player_TestLinearTrick3DPMC = m_Player.FindAction("TestLinearTrick3DPMC", throwIfNotFound: true);
+        m_Player_TestNonLinearSimple3DPMC = m_Player.FindAction("TestNonLinearSimple3DPMC", throwIfNotFound: true);
     }
 
     ~@InputController()
@@ -463,10 +610,17 @@ public partial class @InputController: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_TestLinearSimple3d;
     private readonly InputAction m_Player_TestLinearTrick3d;
     private readonly InputAction m_Player_TestNonLinearSimple3d;
-    private readonly InputAction m_Player_TestNonLinearSimple2dC;
-    private readonly InputAction m_Player_TestNonLinearSimple2dR;
-    private readonly InputAction m_Player_TestXORC;
-    private readonly InputAction m_Player_TestXORR;
+    private readonly InputAction m_Player_TestLinearSimplePMC;
+    private readonly InputAction m_Player_TestLinearMultiplePMC;
+    private readonly InputAction m_Player_TestXORPMC;
+    private readonly InputAction m_Player_TestCrossPMC;
+    private readonly InputAction m_Player_TestMultiLinear3Classes;
+    private readonly InputAction m_Player_TestMultiCross;
+    private readonly InputAction m_Player_TestLinearSimple2DPMC;
+    private readonly InputAction m_Player_TestNonLinearSimple2DPMC;
+    private readonly InputAction m_Player_TestLinearSimple3DPMC;
+    private readonly InputAction m_Player_TestLinearTrick3DPMC;
+    private readonly InputAction m_Player_TestNonLinearSimple3DPMC;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -515,21 +669,49 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @TestNonLinearSimple3d => m_Wrapper.m_Player_TestNonLinearSimple3d;
         /// <summary>
-        /// Provides access to the underlying input action "Player/TestNonLinearSimple2dC".
+        /// Provides access to the underlying input action "Player/TestLinearSimplePMC".
         /// </summary>
-        public InputAction @TestNonLinearSimple2dC => m_Wrapper.m_Player_TestNonLinearSimple2dC;
+        public InputAction @TestLinearSimplePMC => m_Wrapper.m_Player_TestLinearSimplePMC;
         /// <summary>
-        /// Provides access to the underlying input action "Player/TestNonLinearSimple2dR".
+        /// Provides access to the underlying input action "Player/TestLinearMultiplePMC".
         /// </summary>
-        public InputAction @TestNonLinearSimple2dR => m_Wrapper.m_Player_TestNonLinearSimple2dR;
+        public InputAction @TestLinearMultiplePMC => m_Wrapper.m_Player_TestLinearMultiplePMC;
         /// <summary>
-        /// Provides access to the underlying input action "Player/TestXORC".
+        /// Provides access to the underlying input action "Player/TestXORPMC".
         /// </summary>
-        public InputAction @TestXORC => m_Wrapper.m_Player_TestXORC;
+        public InputAction @TestXORPMC => m_Wrapper.m_Player_TestXORPMC;
         /// <summary>
-        /// Provides access to the underlying input action "Player/TestXORR".
+        /// Provides access to the underlying input action "Player/TestCrossPMC".
         /// </summary>
-        public InputAction @TestXORR => m_Wrapper.m_Player_TestXORR;
+        public InputAction @TestCrossPMC => m_Wrapper.m_Player_TestCrossPMC;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestMultiLinear3Classes".
+        /// </summary>
+        public InputAction @TestMultiLinear3Classes => m_Wrapper.m_Player_TestMultiLinear3Classes;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestMultiCross".
+        /// </summary>
+        public InputAction @TestMultiCross => m_Wrapper.m_Player_TestMultiCross;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestLinearSimple2DPMC".
+        /// </summary>
+        public InputAction @TestLinearSimple2DPMC => m_Wrapper.m_Player_TestLinearSimple2DPMC;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestNonLinearSimple2DPMC".
+        /// </summary>
+        public InputAction @TestNonLinearSimple2DPMC => m_Wrapper.m_Player_TestNonLinearSimple2DPMC;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestLinearSimple3DPMC".
+        /// </summary>
+        public InputAction @TestLinearSimple3DPMC => m_Wrapper.m_Player_TestLinearSimple3DPMC;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestLinearTrick3DPMC".
+        /// </summary>
+        public InputAction @TestLinearTrick3DPMC => m_Wrapper.m_Player_TestLinearTrick3DPMC;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/TestNonLinearSimple3DPMC".
+        /// </summary>
+        public InputAction @TestNonLinearSimple3DPMC => m_Wrapper.m_Player_TestNonLinearSimple3DPMC;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -583,18 +765,39 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @TestNonLinearSimple3d.started += instance.OnTestNonLinearSimple3d;
             @TestNonLinearSimple3d.performed += instance.OnTestNonLinearSimple3d;
             @TestNonLinearSimple3d.canceled += instance.OnTestNonLinearSimple3d;
-            @TestNonLinearSimple2dC.started += instance.OnTestNonLinearSimple2dC;
-            @TestNonLinearSimple2dC.performed += instance.OnTestNonLinearSimple2dC;
-            @TestNonLinearSimple2dC.canceled += instance.OnTestNonLinearSimple2dC;
-            @TestNonLinearSimple2dR.started += instance.OnTestNonLinearSimple2dR;
-            @TestNonLinearSimple2dR.performed += instance.OnTestNonLinearSimple2dR;
-            @TestNonLinearSimple2dR.canceled += instance.OnTestNonLinearSimple2dR;
-            @TestXORC.started += instance.OnTestXORC;
-            @TestXORC.performed += instance.OnTestXORC;
-            @TestXORC.canceled += instance.OnTestXORC;
-            @TestXORR.started += instance.OnTestXORR;
-            @TestXORR.performed += instance.OnTestXORR;
-            @TestXORR.canceled += instance.OnTestXORR;
+            @TestLinearSimplePMC.started += instance.OnTestLinearSimplePMC;
+            @TestLinearSimplePMC.performed += instance.OnTestLinearSimplePMC;
+            @TestLinearSimplePMC.canceled += instance.OnTestLinearSimplePMC;
+            @TestLinearMultiplePMC.started += instance.OnTestLinearMultiplePMC;
+            @TestLinearMultiplePMC.performed += instance.OnTestLinearMultiplePMC;
+            @TestLinearMultiplePMC.canceled += instance.OnTestLinearMultiplePMC;
+            @TestXORPMC.started += instance.OnTestXORPMC;
+            @TestXORPMC.performed += instance.OnTestXORPMC;
+            @TestXORPMC.canceled += instance.OnTestXORPMC;
+            @TestCrossPMC.started += instance.OnTestCrossPMC;
+            @TestCrossPMC.performed += instance.OnTestCrossPMC;
+            @TestCrossPMC.canceled += instance.OnTestCrossPMC;
+            @TestMultiLinear3Classes.started += instance.OnTestMultiLinear3Classes;
+            @TestMultiLinear3Classes.performed += instance.OnTestMultiLinear3Classes;
+            @TestMultiLinear3Classes.canceled += instance.OnTestMultiLinear3Classes;
+            @TestMultiCross.started += instance.OnTestMultiCross;
+            @TestMultiCross.performed += instance.OnTestMultiCross;
+            @TestMultiCross.canceled += instance.OnTestMultiCross;
+            @TestLinearSimple2DPMC.started += instance.OnTestLinearSimple2DPMC;
+            @TestLinearSimple2DPMC.performed += instance.OnTestLinearSimple2DPMC;
+            @TestLinearSimple2DPMC.canceled += instance.OnTestLinearSimple2DPMC;
+            @TestNonLinearSimple2DPMC.started += instance.OnTestNonLinearSimple2DPMC;
+            @TestNonLinearSimple2DPMC.performed += instance.OnTestNonLinearSimple2DPMC;
+            @TestNonLinearSimple2DPMC.canceled += instance.OnTestNonLinearSimple2DPMC;
+            @TestLinearSimple3DPMC.started += instance.OnTestLinearSimple3DPMC;
+            @TestLinearSimple3DPMC.performed += instance.OnTestLinearSimple3DPMC;
+            @TestLinearSimple3DPMC.canceled += instance.OnTestLinearSimple3DPMC;
+            @TestLinearTrick3DPMC.started += instance.OnTestLinearTrick3DPMC;
+            @TestLinearTrick3DPMC.performed += instance.OnTestLinearTrick3DPMC;
+            @TestLinearTrick3DPMC.canceled += instance.OnTestLinearTrick3DPMC;
+            @TestNonLinearSimple3DPMC.started += instance.OnTestNonLinearSimple3DPMC;
+            @TestNonLinearSimple3DPMC.performed += instance.OnTestNonLinearSimple3DPMC;
+            @TestNonLinearSimple3DPMC.canceled += instance.OnTestNonLinearSimple3DPMC;
         }
 
         /// <summary>
@@ -633,18 +836,39 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @TestNonLinearSimple3d.started -= instance.OnTestNonLinearSimple3d;
             @TestNonLinearSimple3d.performed -= instance.OnTestNonLinearSimple3d;
             @TestNonLinearSimple3d.canceled -= instance.OnTestNonLinearSimple3d;
-            @TestNonLinearSimple2dC.started -= instance.OnTestNonLinearSimple2dC;
-            @TestNonLinearSimple2dC.performed -= instance.OnTestNonLinearSimple2dC;
-            @TestNonLinearSimple2dC.canceled -= instance.OnTestNonLinearSimple2dC;
-            @TestNonLinearSimple2dR.started -= instance.OnTestNonLinearSimple2dR;
-            @TestNonLinearSimple2dR.performed -= instance.OnTestNonLinearSimple2dR;
-            @TestNonLinearSimple2dR.canceled -= instance.OnTestNonLinearSimple2dR;
-            @TestXORC.started -= instance.OnTestXORC;
-            @TestXORC.performed -= instance.OnTestXORC;
-            @TestXORC.canceled -= instance.OnTestXORC;
-            @TestXORR.started -= instance.OnTestXORR;
-            @TestXORR.performed -= instance.OnTestXORR;
-            @TestXORR.canceled -= instance.OnTestXORR;
+            @TestLinearSimplePMC.started -= instance.OnTestLinearSimplePMC;
+            @TestLinearSimplePMC.performed -= instance.OnTestLinearSimplePMC;
+            @TestLinearSimplePMC.canceled -= instance.OnTestLinearSimplePMC;
+            @TestLinearMultiplePMC.started -= instance.OnTestLinearMultiplePMC;
+            @TestLinearMultiplePMC.performed -= instance.OnTestLinearMultiplePMC;
+            @TestLinearMultiplePMC.canceled -= instance.OnTestLinearMultiplePMC;
+            @TestXORPMC.started -= instance.OnTestXORPMC;
+            @TestXORPMC.performed -= instance.OnTestXORPMC;
+            @TestXORPMC.canceled -= instance.OnTestXORPMC;
+            @TestCrossPMC.started -= instance.OnTestCrossPMC;
+            @TestCrossPMC.performed -= instance.OnTestCrossPMC;
+            @TestCrossPMC.canceled -= instance.OnTestCrossPMC;
+            @TestMultiLinear3Classes.started -= instance.OnTestMultiLinear3Classes;
+            @TestMultiLinear3Classes.performed -= instance.OnTestMultiLinear3Classes;
+            @TestMultiLinear3Classes.canceled -= instance.OnTestMultiLinear3Classes;
+            @TestMultiCross.started -= instance.OnTestMultiCross;
+            @TestMultiCross.performed -= instance.OnTestMultiCross;
+            @TestMultiCross.canceled -= instance.OnTestMultiCross;
+            @TestLinearSimple2DPMC.started -= instance.OnTestLinearSimple2DPMC;
+            @TestLinearSimple2DPMC.performed -= instance.OnTestLinearSimple2DPMC;
+            @TestLinearSimple2DPMC.canceled -= instance.OnTestLinearSimple2DPMC;
+            @TestNonLinearSimple2DPMC.started -= instance.OnTestNonLinearSimple2DPMC;
+            @TestNonLinearSimple2DPMC.performed -= instance.OnTestNonLinearSimple2DPMC;
+            @TestNonLinearSimple2DPMC.canceled -= instance.OnTestNonLinearSimple2DPMC;
+            @TestLinearSimple3DPMC.started -= instance.OnTestLinearSimple3DPMC;
+            @TestLinearSimple3DPMC.performed -= instance.OnTestLinearSimple3DPMC;
+            @TestLinearSimple3DPMC.canceled -= instance.OnTestLinearSimple3DPMC;
+            @TestLinearTrick3DPMC.started -= instance.OnTestLinearTrick3DPMC;
+            @TestLinearTrick3DPMC.performed -= instance.OnTestLinearTrick3DPMC;
+            @TestLinearTrick3DPMC.canceled -= instance.OnTestLinearTrick3DPMC;
+            @TestNonLinearSimple3DPMC.started -= instance.OnTestNonLinearSimple3DPMC;
+            @TestNonLinearSimple3DPMC.performed -= instance.OnTestNonLinearSimple3DPMC;
+            @TestNonLinearSimple3DPMC.canceled -= instance.OnTestNonLinearSimple3DPMC;
         }
 
         /// <summary>
@@ -749,32 +973,81 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTestNonLinearSimple3d(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "TestNonLinearSimple2dC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "TestLinearSimplePMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnTestNonLinearSimple2dC(InputAction.CallbackContext context);
+        void OnTestLinearSimplePMC(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "TestNonLinearSimple2dR" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "TestLinearMultiplePMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnTestNonLinearSimple2dR(InputAction.CallbackContext context);
+        void OnTestLinearMultiplePMC(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "TestXORC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "TestXORPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnTestXORC(InputAction.CallbackContext context);
+        void OnTestXORPMC(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "TestXORR" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "TestCrossPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnTestXORR(InputAction.CallbackContext context);
+        void OnTestCrossPMC(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestMultiLinear3Classes" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestMultiLinear3Classes(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestMultiCross" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestMultiCross(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestLinearSimple2DPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestLinearSimple2DPMC(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestNonLinearSimple2DPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestNonLinearSimple2DPMC(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestLinearSimple3DPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestLinearSimple3DPMC(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestLinearTrick3DPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestLinearTrick3DPMC(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "TestNonLinearSimple3DPMC" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTestNonLinearSimple3DPMC(InputAction.CallbackContext context);
     }
 }

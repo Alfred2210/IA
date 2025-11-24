@@ -79,27 +79,69 @@ public class AppController : MonoBehaviour
             regression.TestNonLinearSimple3d();
     }
 
-    // PMC tests
-    public void LaunchTestNonLinearSimple2dC()
+    // PMC tests Classification
+    public void LaunchTestLinearSimplePMC()
     {
         if (pmc != null)
-            pmc.TestNonLinearSimple2dC();
-    }
-    public void LaunchTestNonLinearSimple2dR()
-    {
-        if (pmc != null)
-            pmc.TestNonLinearSimple2dR();
+            pmc.TestLinearSimple();
     }
 
-    public void LaunchTestXORC()
+
+    public void LaunchTestXORPMC()
     {
         if (pmc != null)
-            pmc.TestXORC();
+            pmc.TestXOR();
     }
 
-    public void LaunchTestXORR()
+    public void LaunchTestLinearMultiplePMC()
     {
         if (pmc != null)
-            pmc.TestXORR();
+            pmc.TestLinearMultiple();
     }
+
+    public void LaunchTestCrossPMC()
+    {
+        if (pmc != null)
+            pmc.TestCross();
+    }
+
+    public void LaunchTestMultiLinear3ClassesPMC()
+    {
+        if (pmc != null)
+            pmc.TestMultiLinear3Classes();
+    }
+
+    public void LaunchTestMultiCrossPMC()
+    {
+        if (pmc != null)
+            pmc.TestMultiCross();
+    }
+
+    // PMC tests Regression
+    public void LaunchTestLinearSimple2dPMC()
+    {
+        if (pmc != null)
+            pmc.TestLinearSimple2D();
+    }
+    public void LaunchTestNonLinearSimple2dPMC()
+    {
+        if (pmc != null)
+            pmc.TestNonLinearSimple2D();
+    }
+    public void LaunchTestLinearSimple3dPMC()
+    {
+        if (pmc != null)
+            pmc.TestLinearSimple3D();
+    }
+    public void LaunchTestLinearTrick3dPMC()
+    {
+        if (pmc != null)
+            pmc.TestLinearTrick3d();
+    }
+    public void LaunchTestNonLinearSimple3dPMC()
+    {
+        if (pmc != null)
+            pmc.TestNonLinearSimple3d();
+    }
+
 }

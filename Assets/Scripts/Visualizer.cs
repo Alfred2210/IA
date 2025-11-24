@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Visualizer : MonoBehaviour
 {
     private MainDll main;
-    public float pointSize = 0.2f;
+    public float pointSize = 0.1f;
 
     private List<GameObject> points = new List<GameObject>();
     private Color blue = Color.blue;
@@ -14,7 +14,7 @@ public class Visualizer : MonoBehaviour
 
     public void Initialize(MainDll main)
     {
-        
+
         this.main = main;
     }
 
@@ -38,6 +38,8 @@ public class Visualizer : MonoBehaviour
         r.material.color = color;
         points.Add(sphere);
     }
+
+    // Classification
     public void DrawLimitsClassification(float xMin, float xMax, float yMin, float yMax)
     {
         for (int i = 0; i <= 30; i++)
@@ -63,12 +65,12 @@ public class Visualizer : MonoBehaviour
         }
     }
 
-
+    // Regression
     public void DrawLimitsRegression(float xMin, float xMax, float yMin, float yMax)
     {
         int resolution = 40;
 
-        for (int i = 0;i <= 30;i++)
+        for (int i = 0; i <= 30; i++)
         {
             for (int j = 0; j <= 30; j++)
             {
@@ -81,8 +83,8 @@ public class Visualizer : MonoBehaviour
 
                 float z = (float)pred[0];
                 float t = Mathf.InverseLerp(-3f, 3f, z);
-                 // couleur selon la classe prédite
-                Color color = Color.Lerp(new Color(0.5f, 0.5f, 1f, 0.3f) , new Color(1f, 0.5f, 0.5f, 0.3f),t);
+                // couleur selon la classe prédite
+                Color color = Color.Lerp(new Color(0.5f, 0.5f, 1f, 0.3f), new Color(1f, 0.5f, 0.5f, 0.3f), t);
                 color.a = 0.6f;
 
                 // afficher les prédictions avec un dégradé de couleur
@@ -92,18 +94,18 @@ public class Visualizer : MonoBehaviour
                 float stepX = (xMax - xMin) / resolution;
                 float stepY = (yMax - yMin) / resolution;
                 quad.transform.localScale = new Vector3(stepX * 1.05f, stepY * 1.05f, 1f);
-                
 
-               
+
+
 
                 quad.GetComponent<Renderer>().material.color = color;
                 points.Add(quad);
             }
         }
-           
-    }
 
-    public void DrawLimitsPMCClassification(float xMin, float xMax, float yMin, float yMax)
+    }
+    // PMC Classification
+    public void DrawLimitsPMCClassification(float xMin, float xMax, float yMin, float yMax, int outputSize = 1)
     {
         for (int i = 0; i <= 30; i++)
         {
@@ -112,27 +114,49 @@ public class Visualizer : MonoBehaviour
                 float x = Mathf.Lerp(xMin, xMax, i / 30f);
                 float y = Mathf.Lerp(yMin, yMax, j / 30f);
 
-                
+
                 double[] test = { x, y };
 
-                
-                double[] pred = main.PredictPMCModel(test, true);
 
-                GameObject quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
-                quad.transform.position = new Vector3(x, y, 0.1f);
-                quad.transform.localScale = Vector3.one * pointSize;
+                double[] pred = main.PredictPMCModel(test, true, outputSize);
 
 
-                // Couleur selon la classe (Tanh renvoie entre -1 et 1)
 
-                Color color = pred[0] > 0 ? new Color(0.5f, 0.5f, 1f, 0.3f) : new Color(1f, 0.5f, 0.5f, 0.3f);
+                Color color = Color.black;
 
-                quad.GetComponent<Renderer>().material.color = color;
-                points.Add(quad);
+                // binaire classification
+                if (outputSize == 1)
+                {
+                    if (pred[0] > 0) color = Color.blue;
+                    else color = Color.red;
+                }
+                // multi-classes (ex: 3 classes)
+                else
+                {
+                    // On cherche l'index le plus fort
+                    int classId = 0;
+                    double maxVal = pred[0];
+                    for (int k = 1; k < outputSize; k++)
+                    {
+                        if (pred[k] > maxVal)
+                        {
+                            classId = k;
+                            maxVal = pred[k];
+                        }
+                    }
+                    if (classId == 0) color = new Color(0.5f, 0.5f, 1f, 0.3f);      // Bleu
+                    else if (classId == 1) color = new Color(1f, 0.5f, 0.5f, 0.3f); // Rouge
+                    else if (classId == 2) color = new Color(0.5f, 1f, 0.5f, 0.3f); // Vert
+                }
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.transform.position = new Vector3(x, y, 0.1f);
+                cube.transform.localScale = Vector3.one * pointSize;
+                cube.GetComponent<Renderer>().material.color = color;
+                points.Add(cube);
             }
         }
     }
-
+    // PMC Regression
     public void DrawLimitsPMCRegression(float xMin, float xMax, float yMin, float yMax)
     {
         for (int i = 0; i <= 30; i++)
@@ -144,23 +168,23 @@ public class Visualizer : MonoBehaviour
 
                 double[] test = { x, y };
 
-               
+
                 double[] pred = main.PredictPMCModel(test, false);
 
-                
+
                 float z = (float)pred[0];
 
-                
+
                 float t = Mathf.InverseLerp(-3f, 3f, z);
-                Color color = Color.Lerp(new Color(0.5f, 0.5f, 1f, 0.3f), new Color(1f, 0.5f, 0.5f, 0.3f), t);
-                color.a = 0.6f;
+                Color color = Color.Lerp(Color.black, Color.greenYellow, t);
+                color.a = 1f;
 
-                GameObject quad = GameObject.CreatePrimitive(PrimitiveType.Quad);
-                quad.transform.position = new Vector3(x, y, 0.1f);
-                quad.transform.localScale = Vector3.one * pointSize;
+                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                cube.transform.position = new Vector3(x, y, 0.1f);
+                cube.transform.localScale = Vector3.one * pointSize;
 
-                quad.GetComponent<Renderer>().material.color = color;
-                points.Add(quad);
+                cube.GetComponent<Renderer>().material.color = color;
+                points.Add(cube);
             }
         }
     }

@@ -139,7 +139,7 @@ public class MainDll : MonoBehaviour
         // créer le nouveau modèle structure comme par ex: new int[] { 2, 3, 1 } -> entree 2 neurones, couche cachée 3 neurones, sortie 1 neurone
         pmcModelPtr = createPMC(structure, structure.Length);
     }
-    public void TrainPMCModel(double[,] X, double[,] Y, int epochs, double alpha, bool isClassification)
+    public void TrainPMCModel(double[,] X, double[,] Y, int iteration, double alpha, bool isClassification)
     {
         if (pmcModelPtr == IntPtr.Zero)
         {
@@ -166,17 +166,16 @@ public class MainDll : MonoBehaviour
                 Y_flat[i * outputSize + j] = Y[i, j];
 
         // appel DLL
-        trainPMC(pmcModelPtr, X_flat, Y_flat, nbSamples, inputSize, outputSize, epochs, alpha, isClassification);
-        Debug.Log("entraînement PMC terminé.");
+        trainPMC(pmcModelPtr, X_flat, Y_flat, nbSamples, inputSize, outputSize, iteration, alpha, isClassification);
+        
     }
 
 
-    public double[] PredictPMCModel(double[] input, bool isClassification)
+    public double[] PredictPMCModel(double[] input, bool isClassification, int outputSize = 1)
     {
         if (pmcModelPtr == IntPtr.Zero) return null;
 
-        int outSize = 1;
-        double[] result = new double[outSize];
+        double[] result = new double[outputSize];
 
         predictPMC(pmcModelPtr, input, input.Length, isClassification, result);
         return result;
