@@ -20,19 +20,13 @@ public class Classification
 
     }
 
-   public void TestLinearSimple()
+    public void TestLinearSimple()
     {
         visualizer.DestroyPoints();
-
         double[,] X = {
-        // point 1 Bleu en bas à gauche
         { 1, 1 }, 
-        
-        // point 2 Rouge en haut à droite
         { 2, 3 }, 
-        
-        // point 3 Rouge en haut à droite
-        { 3, 3 }
+        { 3, 3 }  
     };
         double[] Y = { 1, -1, -1 };
 
@@ -40,9 +34,19 @@ public class Classification
         {
             visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], Y[i] > 0 ? blue : red);
         }
-        main.TrainClassificationModel(X, Y);
-        visualizer.DrawLimitsClassification(0f, 4, 0f, 4f);
 
+        main.TrainClassificationModel(X, Y);
+
+        // Test des predictions
+        Debug.Log("test prediction");
+        for (int i = 0; i < X.GetLength(0); i++)
+        {
+            double[,] testPoint = { { X[i, 0], X[i, 1] } };
+            double[] pred = main.PredictClassificationModel(testPoint);
+            Debug.Log("Point (" + X[i, 0] + ", " + X[i, 1] + ") attendu: " + Y[i] + ", predit: " + pred[0]);
+        }
+
+        visualizer.DrawLimitsClassification(0f, 4, 0f, 4f);
         Debug.Log("Classification = Touche : Haut : Linear Simple | Gauche: Linear Multiple | Bas: XOR | Droite: Cross ");
     }
 
@@ -76,9 +80,18 @@ public class Classification
         {
             X[i, 0] = X_list[i][0];
             X[i, 1] = X_list[i][1];
+
         }
 
         main.TrainClassificationModel(X, Y);
+
+        Debug.Log("test prediction");
+        for (int i = 0; i < X.GetLength(0); i++)
+        {
+            double[,] testPoint = { { X[i, 0], X[i, 1] } };
+            double[] pred = main.PredictClassificationModel(testPoint);
+            Debug.Log("Point (" + X[i, 0] + ", " + X[i, 1] + ") attendu: " + Y[i] + ", predit: " + pred[0]);
+        }
         visualizer.DrawLimitsClassification(0f, 4, 0f, 4f);
     }
 
@@ -105,6 +118,14 @@ public class Classification
             visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], Y[i] > 0 ? blue : red);
 
         main.TrainClassificationModel(X, Y);
+
+        Debug.Log("test prediction");
+        for (int i = 0; i < X.GetLength(0); i++)
+        {
+            double[,] testPoint = { { X[i, 0], X[i, 1] } };
+            double[] pred = main.PredictClassificationModel(testPoint);
+            Debug.Log("Point (" + X[i, 0] + ", " + X[i, 1] + ")  attendu: " + Y[i] + ", predit: " + pred[0]);
+        }
         visualizer.DrawLimitsClassification(-0.5f, 1.5f, -0.5f, 1.5f);
     }
 
@@ -135,6 +156,14 @@ public class Classification
         }
 
         main.TrainClassificationModel(X, Y);
+
+        Debug.Log("test prediction");
+        for (int i = 0; i < X.GetLength(0); i++)
+        {
+            double[,] testPoint = { { X[i, 0], X[i, 1] } };
+            double[] pred = main.PredictClassificationModel(testPoint);
+            Debug.Log("Point (" + X[i, 0] + ", " + X[i, 1] + ") attendu: " + Y[i] + ", predit: " + pred[0]);
+        }
         visualizer.DrawLimitsClassification(-1.5f, 1.5f, -1.5f, 1.5f);
     }
 

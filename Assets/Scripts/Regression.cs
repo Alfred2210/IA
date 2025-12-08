@@ -18,6 +18,7 @@ public class Regression
     public void TestLinearSimple2d()
     {
 
+        visualizer.SetCamera2D();
         visualizer.DestroyPoints();
 
         double[,] X =
@@ -29,10 +30,10 @@ public class Regression
 
         for (int i = 0; i < 2; i++)
         {
-            visualizer.CreatePoint((float)X[i, 0], (float)Y[i], blue);
+            visualizer.CreatePoint((float)X[i, 0], (float)Y[i], Color.yellow);
         }
         main.TrainRegressionModel(X, Y);
-        visualizer.DrawLimitsRegression(0f, 4, 0f, 4f);
+        visualizer.DrawLimitsRegression1D(0f, 4f);
 
         Debug.Log("Regression = Touche : E : Linear Simple 2D | R : LinearSimple3d | T : LinearTrick3d | Y : NonLinearSimple2d | U : NonLinearSimple3d ");
     }
@@ -40,6 +41,7 @@ public class Regression
     public void TestNonLinearSimple2d()
     {
 
+        visualizer.SetCamera2D();
         visualizer.DestroyPoints();
 
         double[,] X =
@@ -53,15 +55,16 @@ public class Regression
 
         for (int i = 0; i < 3; i++)
         {
-            visualizer.CreatePoint((float)X[i, 0], (float)Y[i], blue);
+            visualizer.CreatePoint((float)X[i, 0], (float)Y[i], Color.yellow);
         }
         main.TrainRegressionModel(X, Y);
-        visualizer.DrawLimitsRegression(0f, 4, 0f, 4f);
+        visualizer.DrawLimitsRegression1D(0f, 4f);
 
     }
 
     public void TestLinearSimple3d()
     {
+        visualizer.SetCamera3D();
         visualizer.DestroyPoints();
 
         double[,] X =
@@ -75,7 +78,7 @@ public class Regression
         double[] Y = { 2, 3, 2.5 };
         for (int i = 0; i < 3; i++)
         {
-            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], (float)Y[i], blue);
+            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], (float)Y[i], Color.yellow);
         }
         main.TrainRegressionModel(X, Y);
         visualizer.DrawLimitsRegression(0f, 4, 0f, 4f);
@@ -84,6 +87,7 @@ public class Regression
     public void TestLinearTrick3d()
     {
 
+        visualizer.SetCamera3D();
         visualizer.DestroyPoints();
         double[,] X =
             {
@@ -95,7 +99,7 @@ public class Regression
 
         for (int i = 0; i < 3; i++)
         {
-            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], (float)Y[i], blue);
+            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], (float)Y[i], Color.yellow);
 
         }
         main.TrainRegressionModel(X, Y);
@@ -104,6 +108,7 @@ public class Regression
     public void TestNonLinearSimple3d()
     {
 
+        visualizer.SetCamera3D();
         visualizer.DestroyPoints();
 
         double[,] X = {
@@ -117,7 +122,7 @@ public class Regression
 
         for (int i = 0; i < 4; i++)
         {
-            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], (float)Y[i], blue);
+            visualizer.CreatePoint((float)X[i, 0], (float)X[i, 1], (float)Y[i], Color.yellow);
         }
         main.TrainRegressionModel(X, Y);
         visualizer.DrawLimitsRegression(-0.5f, 1.5f, -2.5f, 2.5f);

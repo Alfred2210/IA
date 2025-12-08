@@ -478,7 +478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Visualizer
   pointSize: 0.1
-  mainCamera: {fileID: 0}
 --- !u!4 &1715476165
 Transform:
   m_ObjectHideFlags: 0

@@ -28,11 +28,11 @@ public class MainDll : MonoBehaviour
     [DllImport("Training_IA")]
     private static extern void deletePMC(IntPtr model_ptr);
 
-    private double[] classificationWeights;
-    private double classificationBias;
-    private double[] regressionWeights;
-    private double regressionBias;
-    private IntPtr pmcModelPtr = IntPtr.Zero;
+    public double[] classificationWeights;
+    public double classificationBias;
+    public double[] regressionWeights;
+    public double regressionBias;
+    public IntPtr pmcModelPtr = IntPtr.Zero;
     // Classification
     public void TrainClassificationModel(double[,] X, double[] Y)
     {
@@ -52,12 +52,16 @@ public class MainDll : MonoBehaviour
 
 
         double[] outParams = new double[D + 1];
-        trainClassification(X_flat, Y, N, D, 0.01, 10000, outParams);
+        trainClassification(X_flat, Y, N, D, 0.01, 100, outParams);
 
         // met le biais dans la première case
         classificationBias = outParams[0];
         classificationWeights = new double[D];
         Array.Copy(outParams, 1, classificationWeights, 0, D);
+
+        Debug.Log("entrainemenet termine");
+        Debug.Log("Bias: " + classificationBias);
+        Debug.Log("W1: " + classificationWeights[0] + ", W2: " + classificationWeights[1]);
     }
 
     public double[] PredictClassificationModel(double[,] X)
@@ -143,7 +147,7 @@ public class MainDll : MonoBehaviour
     {
         if (pmcModelPtr == IntPtr.Zero)
         {
-            Debug.LogError("Erreur : Le modèle PMC n'est pas créé !");
+            Debug.LogError("erreur : Le modele PMC pas ete cree");
             return;
         }
 
